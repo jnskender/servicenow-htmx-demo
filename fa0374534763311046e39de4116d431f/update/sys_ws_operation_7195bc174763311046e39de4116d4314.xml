@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>GET</http_method>
+        <name>Test</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+    // Your server-side logic to generate HTML content
+    var htmlContent = '<html><body><h1>Hello, ServiceNow!</h1></body></html>';
+
+    // Set the content type to HTML in the API response
+    response.setContentType('text/html');
+
+    // Set the API response body with the generated HTML content
+    response.getStreamWriter().writeString(htmlContent);
+})(request, response);
+]]></operation_script>
+        <operation_uri>/api/x_184695_htmx/htmx_demo/test</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/test</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <requires_snc_internal_role>true</requires_snc_internal_role>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-10 14:11:28</sys_created_on>
+        <sys_id>7195bc174763311046e39de4116d4314</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Test</sys_name>
+        <sys_package display_value="htmx demo" source="x_184695_htmx">fa0374534763311046e39de4116d431f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="htmx demo">fa0374534763311046e39de4116d431f</sys_scope>
+        <sys_update_name>sys_ws_operation_7195bc174763311046e39de4116d4314</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-10 14:15:34</sys_updated_on>
+        <web_service_definition display_value="HTMX Demo">b375f8174763311046e39de4116d43d1</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>
